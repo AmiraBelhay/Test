@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Product_Controller"
+      style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e0e0e0); -fx-padding: 30;">
+
+    <!-- Liste des produits avec effet d'ombre portée -->
+    <ListView fx:id="productListView" prefHeight="220" prefWidth="380"
+              style="-fx-background-color: white; -fx-border-color: #ccc; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-font-size: 14px;">
+        <effect>
+            <DropShadow radius="8" offsetX="2" offsetY="2" color="rgba(0,0,0,0.25)"/>
+        </effect>
+    </ListView>
+
+    <!-- Formulaire de saisie avec fond blanc et bordures arrondies -->
+    <VBox spacing="12" alignment="CENTER"
+          style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 20;">
+        <TextField fx:id="productName" promptText="Nom du produit"
+                   style="-fx-font-size: 14px; -fx-background-color: #f2f2f2; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+        <TextField fx:id="productPrice" promptText="Prix"
+                   style="-fx-font-size: 14px; -fx-background-color: #f2f2f2; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+        <TextField fx:id="productQuantity" promptText="Quantité"
+                   style="-fx-font-size: 14px; -fx-background-color: #f2f2f2; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+        <TextField fx:id="productDescription" promptText="Description"
+                   style="-fx-font-size: 14px; -fx-background-color: #f2f2f2; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+        <TextField fx:id="productCategory" promptText="Catégorie"
+                   style="-fx-font-size: 14px; -fx-background-color: #f2f2f2; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+        <TextField fx:id="productImage" promptText="Image"
+                   style="-fx-font-size: 14px; -fx-background-color: #f2f2f2; -fx-padding: 10px; -fx-border-radius: 5px; -fx-background-radius: 5px;"/>
+    </VBox>
+
+    <!-- Boutons d'action avec couleurs attrayantes et ombre portée -->
+    <HBox spacing="20" alignment="CENTER" style="-fx-padding: 10;">
+        <Button text="Ajouter" fx:id="addButton"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+            <effect>
+                <DropShadow radius="5" offsetX="2" offsetY="2" color="rgba(0,0,0,0.3)"/>
+            </effect>
+        </Button>
+        <Button text="Modifier" fx:id="editButton"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+            <effect>
+                <DropShadow radius="5" offsetX="2" offsetY="2" color="rgba(0,0,0,0.3)"/>
+            </effect>
+        </Button>
+        <Button text="Supprimer" fx:id="deleteButton"
+                style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+            <effect>
+                <DropShadow radius="5" offsetX="2" offsetY="2" color="rgba(0,0,0,0.3)"/>
+            </effect>
+        </Button>
+        <Button text="Actualiser" fx:id="refreshButton"
+                style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-background-radius: 5px;">
+            <effect>
+                <DropShadow radius="5" offsetX="2" offsetY="2" color="rgba(0,0,0,0.3)"/>
+            </effect>
+        </Button>
+    </HBox>
+</VBox>
