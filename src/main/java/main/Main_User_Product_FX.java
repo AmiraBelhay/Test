@@ -31,6 +31,7 @@ public class Main_User_Product_FX extends Application {
 
     public static void main(String[] args) {
         // Lancer l'application JavaFX
+        // hola we are testing here
         launch(args);
     }
 }
